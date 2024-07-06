@@ -1,6 +1,3 @@
-import {setConnected} from "./orderBookSlice";
-
-
 class OrderBookWebSocketClass {
     constructor() {
         this._ws = null

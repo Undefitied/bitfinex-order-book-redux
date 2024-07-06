@@ -1,3 +1,8 @@
+### Implementation notes
+* Note some "TODO" in the code, mostly regarding API for which I couldn't find answers in the docs;
+* I am using global CSS file because it is more convenient (faster) for small apps like this one; I would normally use css modules in react, eg: `import styles from './styles.module.css';`
+* ... please let me know if you have any questions
+
 # Order Book widget functionality from the Trading page of the Bitfinex website
 
 ## General Requirements

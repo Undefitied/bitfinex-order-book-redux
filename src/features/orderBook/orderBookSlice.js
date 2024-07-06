@@ -1,4 +1,3 @@
-// src/features/orderBook/orderBookSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const MAX_ROWS = 25

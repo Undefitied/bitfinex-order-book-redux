@@ -6,6 +6,7 @@ export default function BookTable({ rows }) {
         <div className="book__header">
             <div className="book-cell book-cell-count">Count</div>
             <div className="book-cell book-cell-amount">Amount</div>
+            {/*TODO: clarify documentation: From the documentation I am not sure what value is "Total"*/}
             {/*<div className="book-cell book-cell-total">Total</div>*/}
             <div className="book-cell book-cell-price">Price</div>
         </div>
