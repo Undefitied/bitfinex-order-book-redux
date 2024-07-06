@@ -12,7 +12,6 @@ const OrderBook = () => {
     const [isDisconnecting, setIsDisconnecting] = useState(false)
 
     const connect = useCallback(() => {
-        console.log('connect callback')
         setIsConnecting(true)
         const { success } = OrderBookWebSocket.init(
             () => {
@@ -76,10 +75,8 @@ const OrderBook = () => {
     }, [isDisconnecting, setIsDisconnecting])
 
     useEffect(() => {
-        console.log('mounting')
         connect()
         return () => {
-            console.log('unmounting')
             disconnect()
         }
     }, [connect]);

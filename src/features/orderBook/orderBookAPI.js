@@ -13,11 +13,9 @@ class OrderBookWebSocketClass {
         }
 
         this._isConnecting = true
-        console.log('connecting')
         this._ws = new WebSocket('wss://api-pub.bitfinex.com/ws/2')
         this._ws.onopen = () => {
             this._isConnecting = false
-            console.log('connected', onOpen)
             this._ws.send(JSON.stringify({
                 event: 'subscribe',
                 channel: 'book',
