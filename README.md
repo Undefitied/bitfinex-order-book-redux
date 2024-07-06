@@ -1,5 +1,6 @@
 ### Implementation notes
 * Note some "TODO" in the code, mostly regarding API for which I couldn't find answers in the docs;
+* On https://trading.bitfinex.com/t?demo=true it looks like some rows are being updated. I am not sure which behaviour is expected, I was looking for an "ID" field while looking at "BOOK ENTRY" https://docs.bitfinex.com/reference/ws-public-books#book-entry but couldn't find it.  In my implementation new rows are always prepended;  
 * I am using global CSS file because it is more convenient (faster) for small apps like this one; I would normally use css modules in react, eg: `import styles from './styles.module.css';`;
 * I am not using constants for error and info messages, which would normally come from a localization framework;
 * I am opting for using the coding style without semicolons and using single quotes but now there may be inconsistencies, I didn't install eslint or fixed them manually because of the limited time;
