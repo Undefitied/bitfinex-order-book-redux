@@ -17,6 +17,7 @@ const OrderBook = () => {
             () => {
                 setIsConnecting(false)
                 dispatch(setConnected(true))
+                setError(null)
             },
             (msg) => {
                 try {
@@ -86,8 +87,8 @@ const OrderBook = () => {
             {error && <div className="message message-error">{error}</div>}
 
             <div className="book__buttons">
-                <button onClick={disconnect} disabled={!isDisconnecting && !connected}>Disconnect</button>
-                <button onClick={connect} disabled={!isConnecting && connected}>Connect</button>
+                <button onClick={disconnect} disabled={isDisconnecting || isConnecting || !connected}>Disconnect</button>
+                <button onClick={connect} disabled={isDisconnecting || isConnecting || connected}>Connect</button>
             </div>
 
             <div className="message">
